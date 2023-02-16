@@ -104,6 +104,7 @@
               alert('thank you for your donation');
           }
           var makeADonation = function () {
+              console.log('make a donation! made it this far!!!');
               // start a transaction to send 0.01 ETH to the bellmorecode.eth wallet.
               if (window.ethereum) {
                   try {
@@ -125,6 +126,7 @@
               }
           }
           document.getElementById('donate-button').addEventListener("click", makeADonation);
+          document.getElementById('donate-button').css("opacity", 0.2);
           console.log('donate button click attached');
     </script>
   
