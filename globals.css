@@ -1,0 +1,44 @@
+  
+body {
+	font-size: 20pt;
+	background-color: #ededed;
+	text-align: center;
+	padding: 10vh 10vw;
+}
+
+h6 {
+	margin-block-start: 5vh;
+	font-size: 16pt;
+	color: #686977;
+	text-decoration: underline;
+	text-transform: uppercase;
+}
+
+.lead {
+	font-size: 1.2em;
+}
+
+h1 {
+	font-weight: 600;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+a:active {
+	text-decoration: wavy;
+	color: darkviolet;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.other-odditites li {
+	display: inline-block;
+	margin: 5px 10px;
+}
