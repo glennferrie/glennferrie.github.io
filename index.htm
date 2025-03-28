@@ -13,8 +13,8 @@
           background-color: #444; color: #d8d8d8;
           font-family: 'Roboto';
         }
-        a { color: #d8d8d8; font-size: 0.9em; }
-        a:hover { text-decoration: none; color: #f0f0f0; font-size: 0.9em; }
+        a { color: #d8d8d8; }
+        a:hover { text-decoration: none; color: #f0f0f0;  }
         ul {
           padding: 0; margin: 0; list-style: none;
         }
@@ -23,11 +23,25 @@
           margin-block-end: 3vh;
         }
         h5 { margin-inline: 4vw; font-weight: 300; }
-        p.lead {
-          font-size: 0.9em;
+        .byline {
+          color: #aaa;
+          margin-inline: 4vw;
+          font-size: 0.5em; 
         }
         .grid a { 
-          width: 125px; display: inline-block;
+          width: 18vw; display: inline-block;
+        }
+        @media screen and (max-width: 500px) {
+          .grid a { 
+            width: 40vw; display: inline-block;
+          } 
+        }
+
+        @media screen and (max-width: 450px) {
+          .grid a { 
+            width: 40vw; display: block;
+            margin-inline: auto ;
+          } 
         }
     </style>
   </head>
@@ -42,8 +56,10 @@
 
             <div>
               <p class="lead">
-                Glenn is a software engineer and technology enthusiast that has been experimenting with different technologies and digital art creation since the 1990's
+                Glenn is a software engineer and technology enthusiast that has been experimenting with different technologies and digital art creation since the 1990's.  
               </p>
+
+              <p>More recently we're trying to solve tough business problems with automation and intelligent agents.  Also, conducting experiments on the blockchain. </p>
 
               <span class="text-white">connect</span>
 
@@ -91,6 +107,7 @@
             <div class="grid">
               <a href="https://rektech.com/" target="_blank" rel="noopener noreferrer" class="external-link">rektech</a>
               <a href="https://niftyisland.com/profile/glennnn" target="_blank" rel="noopener noreferrer" class="external-link">niftyisland</a>
+              <a href="https://play.upland.me/" target="_blank" rel="noopener noreferrer" class="external-link">upland</a>
               <a href="https://substrata.info" target="_blank" rel="noopener noreferrer" class="external-link">substrata</a>              
               <a href="https://basejump.xyz/" target="_blank" rel="noopener noreferrer" class="external-link">basejump</a>              
               
@@ -98,6 +115,9 @@
           </li>
         </ul>
       </nav>
+      <small class="byline">
+        last modified: 2025-03-28
+      </div>
     </div>
     <script src="http://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
     <script type="text/javascript">
