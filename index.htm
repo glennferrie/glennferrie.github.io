@@ -111,14 +111,16 @@
               <a href="https://play.upland.me/" target="_blank" rel="noopener noreferrer" class="external-link">upland</a>
               <a href="https://substrata.info" target="_blank" rel="noopener noreferrer" class="external-link">substrata</a>              
               <a href="https://basejump.xyz/" target="_blank" rel="noopener noreferrer" class="external-link">basejump</a>              
+              <a href="https://www.infinite-garden.xyz/4408" target="_blank" rel="noopener noreferrer" class="external-link">infinite garden</a>              
+              
             </div>
           </li>
           <li>
             <span class="text-white">donate crypto</span>
             <div class="grid">
-              <a href="#" target="_blank" onclick="donateEth(this, 0.001)" data-wallet="0x06Bbe2727cb099dc769B0eD48e109Fde69dE824A" title="0x06Bbe2727cb099dc769B0eD48e109Fde69dE824A"  rel="noopener noreferrer" class="external-link">glennnn.eth</a>
-              <a href="#" target="_blank" onclick="donateEth(this, 0.001)" data-wallet="0x8011C924C461efC9931D00a3f36EbF663c5d98FC" title="0x8011C924C461efC9931D00a3f36EbF663c5d98FC" rel="noopener noreferrer" class="external-link">glennn.eth</a>
-              <a href="#" target="_blank" onclick="donateEth(this, 0.001)" data-wallet="0x638d58F5270329360031EeC235309bDedDe5645d" title="0x638d58F5270329360031EeC235309bDedDe5645d" rel="noopener noreferrer" class="external-link">metamakerx</a>
+              <a href="#" onclick="donateEth(this, 0.001); return false" data-wallet="0x06Bbe2727cb099dc769B0eD48e109Fde69dE824A" title="0x06Bbe2727cb099dc769B0eD48e109Fde69dE824A"  rel="noopener noreferrer" class="external-link">glennnn.eth</a>
+              <a href="#" onclick="donateEth(this, 0.001); return false" data-wallet="0x8011C924C461efC9931D00a3f36EbF663c5d98FC" title="0x8011C924C461efC9931D00a3f36EbF663c5d98FC" rel="noopener noreferrer" class="external-link">glennn.eth</a>
+              <a href="#" onclick="donateEth(this, 0.001); return false" data-wallet="0x638d58F5270329360031EeC235309bDedDe5645d" title="0x638d58F5270329360031EeC235309bDedDe5645d" rel="noopener noreferrer" class="external-link">metamakerx</a>
             </div>
           </li>
         </ul>
@@ -127,10 +129,32 @@
         <a href="https://github.com/glennferrie/glennferrie.github.io">src</a> | <a href="https://glennferrie.github.io">link</a>
       </div>
     </div>
-    <script src="http://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/JavaScript" src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.13.5/ethers.umd.min.js"></script>
     <script type="text/javascript">
       function donateEth (linkBtn, amount) {
-        console.log('donate');
+
+        let callback = result => { console.log({ result }); };
+
+        let wallet = $(linkBtn).data("wallet");
+        if (window.ethereum) {
+          try {
+                let eth = window.ethereum;
+                let provider = new ethers.BrowserProvider(eth);
+                provider.getSigner().then( signer => {
+                    let tx = signer.sendTransaction({to:wallet, value:ethers.parseEther(amount) });
+                    if (callback) {
+                        tx.then(callback);  
+                    } else {
+                        tx.then(function (a) { console.log({a}); });
+                    }
+                });
+                
+            } catch (err) {
+               console.log({donateError: err});
+               alert('sorry. something went wrong.');
+            }
+        }
       }
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D01ZGKF5KW"></script>
