@@ -2,6 +2,6 @@
 
 my personal website
 
-Site URL: http://glennferrie.com
+Site URL: http://glennnn.eth.limo
 
 for questions or feedback email: glenn@bellmorecode.com
