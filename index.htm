@@ -17,6 +17,9 @@
         }
         a { color: #d8d8d8; }
         a:hover { text-decoration: none; color: #f0f0f0;  }
+        h5 {
+          font-family: 'Bitcount Prop Single';
+        }
         ul {
           padding: 0; margin: 0; list-style: none;
         }
@@ -28,15 +31,31 @@
         .byline {
           color: #aaa;
           margin-inline: 4vw;
-          font-size: 0.5em; 
+          
         }
         .grid a { 
           width: 18vw; display: inline-block;
+          text-decoration: none;
+          font-family: 'Bitcount Prop Single';
+          font-size: 1.25em;
+        }
+
+        .grid a:hover {
+          color: #F7931A;
         }
 
         .text-btc {
           color: #F7931A;
           font-weight: 600;
+        }
+
+        nav > ul > li > span.text-white {
+          font-family: 'Bitcount Prop Single';
+          text-transform: uppercase;
+        }
+
+        nav > ul > li > span.text-white::before {
+          content:'∴ ';
         }
       
         @media screen and (max-width: 500px) {
@@ -64,12 +83,10 @@
 
             <div>
               <p class="lead">
-                Glenn is a software engineer and technology enthusiast that has been experimenting with different technologies and digital art creation since the 1990's.  
+                Glenn is a software engineer and technology enthusiast that has been building with various technologies and creating digital art since the 1990's.  
               </p>
 
-              <p>More recently we're trying to solve tough business problems with automation and intelligent agents.  Also, conducting experiments on the blockchain. </p>
-
-              <span class="text-white">connect with me</span>
+              <p> SOCIAL NETWORK PROFILE PAGES </p>
 
               <div class="grid">
                 <a href="https://x.com/glennferrie/" target="_blank" rel="noopener noreferrer" class="external-link">X</a>
