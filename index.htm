@@ -30,8 +30,7 @@
         h5 { margin-inline: 4vw; font-weight: 300; }
         .byline {
           color: #aaa;
-          margin-inline: 4vw;
-          
+          margin-inline: 4vw;      
         }
         .grid a { 
           width: 18vw; display: inline-block;
@@ -39,31 +38,26 @@
           font-family: 'Bitcount Prop Single';
           font-size: 1.25em;
         }
-
-        .grid a:hover {
+      .grid a:hover {
           color: #F7931A;
         }
-
         .text-btc {
           color: #F7931A;
           font-weight: 600;
         }
-
         nav > ul > li > span.text-white {
           font-family: 'Bitcount Prop Single';
           text-transform: uppercase;
         }
-
         nav > ul > li > span.text-white::before {
           content:'∴ ';
-        }
-      
+        }  
+        .d-none { display: none; }
         @media screen and (max-width: 500px) {
           .grid a { 
             width: 36vw; display: inline-block;
           } 
         }
-
         @media screen and (max-width: 450px) {
           .grid a { 
             width: 60vw; 
@@ -109,7 +103,7 @@
               <a href="https://metamakerx.com/" target="_blank" rel="noopener noreferrer" class="external-link">metamakerx</a>
             </div>
           </li>
-          <li>
+          <li class="d-none">
             <span class="text-white">web3 🧪</span>
             <div class="grid">
               <a href="https://badgrovers.com/" target="_blank" rel="noopener noreferrer" class="external-link">badgrovers</a>
