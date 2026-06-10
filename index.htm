@@ -81,17 +81,16 @@
               </p>
 
               <div class="grid">
+                <a href="https://github.com/bellmorecode" target="_blank" rel="noopener noreferrer" class="external-link">github</a>
+                <a href="https://clusters.xyz/glenn" target="_blank" rel="noopener noreferrer" class="external-link">clusters</a>
+                <a href="https://stackoverflow.com/users/747965/glenn-ferrie" target="_blank" rel="noopener noreferrer" class="external-link">stackoverflow</a>
                 <a href="https://x.com/glennferrie/" target="_blank" rel="noopener noreferrer" class="external-link">X</a>
                 <a href="https://discordapp.com/users/glennnn.eth" target="_blank" rel="noopener noreferrer" class="external-link">discord</a>
                 <a href="https://www.linkedin.com/in/glennferrie" target="_blank" rel="noopener noreferrer" class="external-link">linkedin</a>
-                <a href="https://stackoverflow.com/users/747965/glenn-ferrie" target="_blank" rel="noopener noreferrer" class="external-link">stackoverflow</a>
-                <a href="https://github.com/glennferrie" target="_blank" rel="noopener noreferrer" class="external-link">github</a>
-                <a href="https://warpcast.com/glennnn" target="_blank" rel="noopener noreferrer" class="external-link">farcaster</a>
-                <a href="https://opensea.io/glennnn.eth" target="_blank" rel="noopener noreferrer" class="external-link">opensea</a>
-                <a href="https://rodeo.club/@glennnnnnnn" target="_blank" rel="noopener noreferrer" class="external-link">rodeo</a>
-                <a href="https://clusters.xyz/glenn" target="_blank" rel="noopener noreferrer" class="external-link">clusters</a>
                 <a href="https://www.instagram.com/glennferrie" target="_blank" rel="noopener noreferrer" class="external-link">instagram</a>
                  <a href="https://t.me/glennf1216" target="_blank" rel="noopener noreferrer" class="external-link">telegram</a>
+                <a href="https://warpcast.com/glennnn" target="_blank" rel="noopener noreferrer" class="external-link">farcaster</a>
+                <a href="https://github.com/glennferrie" target="_blank" rel="noopener noreferrer" class="external-link">github (college)</a>
               </div>
             </div>
           </li>
@@ -116,22 +115,20 @@
           <li>
             <span class="text-white">tools</span>
             <div class="grid">
-              <a href="https://metamakerx.com/clip" target="_blank" rel="noopener noreferrer" class="external-link">cloud clip</a>
+              <a href="https://metamakerx.com/clip" target="_blank" rel="noopener noreferrer" class="external-link">cloud clipboard</a>
+              <a href="https://bkpk.site" target="_blank" rel="noopener noreferrer" class="external-link">backpack sites</a>
               <a href="https://metamakerx.com/modelfoundry" target="_blank" rel="noopener noreferrer" class="external-link">model foundry</a>
-              <a href="https://convopods.com" target="_blank" rel="noopener noreferrer" class="external-link">convopods</a>
             </div>
           </li>
           <li>
             <span class="text-white">play</span>
             <div class="grid">
-              <a href="https://rektech.com/" target="_blank" rel="noopener noreferrer" class="external-link">rektech</a>
+              <a href="https://substrata.info/webclient?x=221.4&y=494.4&z=1.72&heading=180.7" target="_blank" rel="noopener noreferrer" class="external-link">substrata</a>              
               <a href="https://niftyisland.com/profile/glennnn" target="_blank" rel="noopener noreferrer" class="external-link">niftyisland</a>
               <a href="https://play.upland.me/profile?username=bellmorecode" target="_blank" rel="noopener noreferrer" class="external-link">upland</a>
+              <a href="https://otherside.xyz" target="_blank" rel="noopener noreferrer" class="external-link">Otherside</a>              
               <a href="https://play.tmwstw.io/?plot=951" target="_blank" rel="noopener noreferrer" class="external-link">tmwstw</a>
-              <a href="https://substrata.info/webclient?x=221.4&y=494.4&z=1.72&heading=180.7" target="_blank" rel="noopener noreferrer" class="external-link">substrata</a>              
-              <a href="https://basejump.xyz/" target="_blank" rel="noopener noreferrer" class="external-link">basejump</a>              
               <a href="https://www.infinite-garden.xyz/4408" target="_blank" rel="noopener noreferrer" class="external-link">infinite garden</a>   
-              
             </div>
           </li>
           <li>
@@ -158,8 +155,15 @@
       function donateEth (linkBtn, amount) {
 
         let callback = result => { console.log({ result }); };
-
         let wallet = $(linkBtn).data("wallet");
+        
+        let xlink = document.createElement('a');
+        xlink.target = "_blank";
+        xlink.href = "https://opensea.io/" + wallet;
+        xlink.click();
+
+        return;
+        
         if (window.ethereum) {
           try {
                 let eth = window.ethereum;
