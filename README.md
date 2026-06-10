@@ -1,6 +1,6 @@
 # glennferrie.github.io
 
-my personal website
+my personal linktree
 
 Site URL: http://glennnn.eth.limo
 
